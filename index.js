@@ -3,25 +3,25 @@ const employee = {
   streetAddress: "859 Vallejo St",
 };
 
-function updateEmployeeWithKeyAndValue(obj, key, value) {
+function updateEmployeeWithKeyAndValue(emp, key, value) {
   return {
-    ...obj,
+    ...emp,
     [key]: value,
   };
 }
 
-function destructivelyUpdateEmployeeWithKeyAndValue(obj, key, value) {
-  obj[key] = value;
-  return obj;
+function destructivelyUpdateEmployeeWithKeyAndValue(emp, key, value) {
+  emp[key] = value;
+  return emp;
 }
 
-function deleteFromEmployeeByKey(obj, key, value) {
-  const employee2 = {...obj};
-  delete employee2[key];
-  return employee2;
+function deleteFromEmployeeByKey(emp, key) {
+  let newEmployee = {...emp};
+  delete newEmployee[key];
+  return newEmployee;
 }
 
-function destructivelyDeleteFromEmployeeByKey(obj, key, value) {
- delete employee[key];
- return employee;
+function destructivelyDeleteFromEmployeeByKey(emp, key) {
+  delete emp[key];
+  return emp;
 }
